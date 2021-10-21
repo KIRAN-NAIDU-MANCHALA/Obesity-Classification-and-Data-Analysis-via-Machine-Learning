@@ -1,7 +1,7 @@
 [ObesityDataSet_raw_and_data_sinthetic.csv](https://github.com/KIRAN-NAIDU-MANCHALA/Obesity-Classification-and-Data-Analysis-via-Machine-Learning/files/7389420/ObesityDataSet_raw_and_data_sinthetic.csv)
-############### Obesity-Classification-and-Data-Analysis-via-Machine-Learning
-### Introduction
-# I chose to further analyze the dataset I used for my EDA for the final project. The dataset recorded the obesity levels of people from Mexico, Peru, and Colombia alongside their eating habits and physical condition. As the project asked us to build a machine learning model, I was interested in building an accurate model around if a person is obese or not — a two-class problem — as well as finding the features that would be most relevant in training this model.
+# Obesity-Classification-and-Data-Analysis-via-Machine-Learning
+## Introduction
+### I chose to further analyze the dataset I used for my EDA for the final project. The dataset recorded the obesity levels of people from Mexico, Peru, and Colombia alongside their eating habits and physical condition. As the project asked us to build a machine learning model, I was interested in building an accurate model around if a person is obese or not — a two-class problem — as well as finding the features that would be most relevant in training this model.
 
 
 #The dataset I used has the data of 2111 individuals aged 14 to 61 and 17 attributes. Many of these attributes have acronyms, so I briefly described all of them below:
