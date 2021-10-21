@@ -5,7 +5,7 @@
 
 #The dataset I used has the data of 2111 individuals aged 14 to 61 and 17 attributes. Many of these attributes have acronyms, so I briefly described all of them below:
 
--Gender: 1= female, 2 = male
+ - Gender: 1= female, 2 = male
 #Age: numeric
 #Height: numeric, in meters
 #Weight: numeric, in kilograms
