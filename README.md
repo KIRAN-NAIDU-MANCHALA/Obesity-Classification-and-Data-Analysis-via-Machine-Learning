@@ -23,34 +23,51 @@
  - Transportation: 1 = automobile, 2 = motorbike, 3 = bike, 4 = public transportation, 5= walking
  - Obesity (target variable): 2 = not obese, 4 = obese.
 
-%matplotlib inline
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-from sklearn import linear_model
-from sklearn.metrics import mean_squared_error, r2_score
-from sklearn.preprocessing import PolynomialFeatures
+# Data Preparation
+## 1.Import libraries
 
-df = pd.read_csv(r"C:\Users\Hi\Desktop\ObesityDataSet_raw_and_data_sinthetic.csv")
-df.head()
 
-df.dtypes
+ - %matplotlib inline
+ - import matplotlib.pyplot as plt
+ - import numpy as np
+ - import pandas as pd
+ - from sklearn import linear_model
+ - from sklearn.metrics import mean_squared_error, r2_score
+ - from sklearn.preprocessing import PolynomialFeatures
 
-df.isnull().sum()
+ - df = pd.read_csv(r"C:\Users\Hi\Desktop\ObesityDataSet_raw_and_data_sinthetic.csv")
+ - df.head()
 
-from sklearn.preprocessing import LabelEncoder
 
-le = LabelEncoder()
+## First, I imported the libraries I would need to understand and train my data. After, I used google.colab to import the CSV file, and then loaded the data into a      data frame using pandas. The first five data points are shown through the .head function.
 
-for col in df.columns[~(df.columns.isin(['Age']))].tolist():
-    df[col] = le.fit_transform(df[col])
+# CHECKING SHAPE AND VALUSES
+
+ - df.dtypes
+
+ - df.isnull().sum()
+
+
+## The .shape function accurately returned (2111,17), and the heatmap confirmed that there are no missing values.
+
+
+# Premodeling
+### 1.Preprocessing
+
+ - from sklearn.preprocessing import LabelEncoder
+
+ - le = LabelEncoder()
+
+ - for col in df.columns[~(df.columns.isin(['Age']))].tolist():
+   -  df[col] = le.fit_transform(df[col])
+   
+ #### Before the data can be split, it should be normalized because the ranges of the dataset features are not the same. This can be problematic because a small change in a feature may not affect the other, so the ranges are normalized to a uniform range of 0–1.
+  
+ # 2. Splitting test and training data 
     
-    
-    
-    
-from sklearn.model_selection import train_test_split
+ - from sklearn.model_selection import train_test_split
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=1)
+ - X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=1)
 
 
 
@@ -70,8 +87,8 @@ log_reg.fit(X_train, y_train)
 
 
 # for test data
-y_prob = log_reg.predict_proba(X_test)[:,1]
-y_pred = log_reg.predict(X_test) #to change threshold should do it manually
+ - y_prob = log_reg.predict_proba(X_test)[:,1]
+ - y_pred = log_reg.predict(X_test) #to change threshold should do it manually
 
 
 
@@ -81,25 +98,25 @@ print('Accuracy for test: ',accuracy_score(y_test,y_pred))
 
 
 
-#confusion matrix
-print('Confussion matrix : ','\n',confusion_matrix(y_test,y_pred))
+# confusion matrix
+ - print('Confussion matrix : ','\n',confusion_matrix(y_test,y_pred))
 
 
 
 # Recall Presicion 
-print(classification_report(y_test,y_pred))
+ - print(classification_report(y_test,y_pred))
 
 
 
-#mean squared error of the model
-mse = mean_squared_error(y_test,y_pred)
-mse
+# mean squared error of the model
+ - mse = mean_squared_error(y_test,y_pred)
+ - mse
 
 
 
 # Finding error.
-rmse =np.sqrt(mean_squared_error(y_test,y_pred))
-rmse
+ - rmse =np.sqrt(mean_squared_error(y_test,y_pred))
+ - rmse
 
 
 
