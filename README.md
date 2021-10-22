@@ -55,8 +55,7 @@
 
  - df.isnull().sum()
 
- ![4](https://user-images.githubusercontent.com/92929087/138437004-ed2612cb-072e-441a-b845-927b6f71ca96.png)
-
+![6](https://user-images.githubusercontent.com/92929087/138437492-28f31e16-2681-4e38-9744-1e03e340ead8.png)
 
 
 ## The .shape function accurately returned (2111,17), and the heatmap confirmed that there are no missing values.
@@ -71,6 +70,10 @@
 
  - for col in df.columns[~(df.columns.isin(['Age']))].tolist():
    -  df[col] = le.fit_transform(df[col])
+   -  df
+
+![image](https://user-images.githubusercontent.com/92929087/138437744-86561630-ab62-4cb2-982d-eda65306448d.png)
+
    
  #### Before the data can be split, it should be normalized because the ranges of the dataset features are not the same. This can be problematic because a small change in a feature may not affect the other, so the ranges are normalized to a uniform range of 0–1.
   
