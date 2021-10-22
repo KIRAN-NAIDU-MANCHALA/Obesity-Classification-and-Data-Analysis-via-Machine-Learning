@@ -47,10 +47,16 @@
 # CHECKING SHAPE AND VALUSES
 
  - df.shape
- - 
+![2](https://user-images.githubusercontent.com/92929087/138436991-3873a774-e009-4836-a6f2-55e5ea9239b7.png)
+ 
  - df.dtypes
 
+![3](https://user-images.githubusercontent.com/92929087/138436998-e1a15bb3-f3fb-4422-a021-255036aa4f34.png)
+
  - df.isnull().sum()
+
+ ![4](https://user-images.githubusercontent.com/92929087/138437004-ed2612cb-072e-441a-b845-927b6f71ca96.png)
+
 
 
 ## The .shape function accurately returned (2111,17), and the heatmap confirmed that there are no missing values.
