@@ -78,6 +78,9 @@
  #### Before the data can be split, it should be normalized because the ranges of the dataset features are not the same. This can be problematic because a small change in a feature may not affect the other, so the ranges are normalized to a uniform range of 0–1.
   
  # 2. Splitting test and training data 
+ - X=df[['Gender','Age','Height','Weight','family_history_with_overweight','FAVC','FCVC','NCP','CAEC','SMOKE','CH2O','SCC','FAF','TUE','CALC','MTRANS','NObeyesdad']]
+ - y = df['NObeyesdad']
+ - X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.5,random_state=100)
     
  - from sklearn.model_selection import train_test_split
 
