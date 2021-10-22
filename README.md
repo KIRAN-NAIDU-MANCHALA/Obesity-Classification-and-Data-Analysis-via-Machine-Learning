@@ -112,6 +112,8 @@
 
  - log_reg.fit(X_train, y_train)
 
+![99](https://user-images.githubusercontent.com/92929087/138446650-40162eff-ff88-41bb-b96a-fd417dc31a5a.png)
+
 
 
 # for test data
@@ -128,15 +130,24 @@ from sklearn.metrics import confusion_matrix, accuracy_score, classification_rep
 
 print('Accuracy for test: ',accuracy_score(y_test,y_pred))
 
+![image](https://user-images.githubusercontent.com/92929087/138447208-b770b912-6321-4a8f-8342-4124d229424e.png)
+
+
 
 
 # confusion matrix
  - print('Confussion matrix : ','\n',confusion_matrix(y_test,y_pred))
 
+![image](https://user-images.githubusercontent.com/92929087/138447320-d1c244bf-f5a6-4992-a62b-60d18e9afae4.png)
+
+
 
 
 # Recall Presicion 
  - print(classification_report(y_test,y_pred))
+
+![image](https://user-images.githubusercontent.com/92929087/138447404-a7294ea6-cf67-4766-a67c-d4d21236f063.png)
+
 
 
 
@@ -144,17 +155,26 @@ print('Accuracy for test: ',accuracy_score(y_test,y_pred))
  - mse = mean_squared_error(y_test,y_pred)
  - mse
 
+![image](https://user-images.githubusercontent.com/92929087/138447594-5ed7a815-5d86-4458-8a3d-2d34ba53e4ec.png)
+
+
 
 
 # Finding error.
  - rmse =np.sqrt(mean_squared_error(y_test,y_pred))
  - rmse
 
+![image](https://user-images.githubusercontent.com/92929087/138447671-67aa70bd-3cfe-4dfc-8906-b2157afacf78.png)
 
 
-import seaborn as sns
-sns.distplot(df.NObeyesdad)
-plt.show()
+
+
+ - import seaborn as sns
+ - sns.distplot(df.NObeyesdad)
+ - plt.show()
+
+![image](https://user-images.githubusercontent.com/92929087/138447889-72d2f4a9-78b0-41e2-9d9d-84cac9244500.png)
+
 
 
 
