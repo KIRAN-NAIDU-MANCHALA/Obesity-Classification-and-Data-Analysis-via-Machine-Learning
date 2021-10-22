@@ -35,14 +35,19 @@
  - from sklearn.metrics import mean_squared_error, r2_score
  - from sklearn.preprocessing import PolynomialFeatures
 
+# IMPORTING DATA SET
+
  - df = pd.read_csv(r"C:\Users\Hi\Desktop\ObesityDataSet_raw_and_data_sinthetic.csv")
  - df.head()
 
+![1](https://user-images.githubusercontent.com/92929087/138436411-dab2ede5-c435-4192-b9a7-dc4ca84074df.png)
 
 ## First, I imported the libraries I would need to understand and train my data. After, I used google.colab to import the CSV file, and then loaded the data into a      data frame using pandas. The first five data points are shown through the .head function.
 
 # CHECKING SHAPE AND VALUSES
 
+ - df.shape
+ - 
  - df.dtypes
 
  - df.isnull().sum()
