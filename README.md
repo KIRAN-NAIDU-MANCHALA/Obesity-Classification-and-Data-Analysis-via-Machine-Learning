@@ -69,26 +69,41 @@
 
  - X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=1)
 
+ # Logistic Regression
+### Logistic Regression
+### One of the basic linear models developed with a probabilistic approach to classification problems is Logistic Regression (31) and is one of the supervised
+###  learning models widely used in ML. Logistic Regression can be seen as a development of Linear Regression models with a logistic function for data with a
+### target in the form of classes (32) as follows:
+
+### y(x)=σ(β0+βTx ),
+### where x=(x1,x2,…,xD)T is the D-dimensional data, β=(β1,β2,…,βD)T are the weight parameters, β0 is the bias parameter, and σ is a logistic function that is shaped ### as σ(a)=11+e−a.
+
+### The weights of β can be obtained by using probabilistic concepts. For example, if yn = y(xn) and tn ∈ {0, 1} are an independent identical distribution. The joint probabilistic or likelihood function for all the data can be expressed by the Bernoulli distribution p(t|β), where t=(t1,t2,…,tN)T. Therefore, the Logistic Regression learning and bias (β) is to maximize p(t∨β). The learning method for determining the weight and bias (β) parameters is known as the maximum likelihood method. Generally, the solution to the maximum likelihood problem is done by minimizing the negative of the logarithm of the likelihood function, namely minβ E(β), where E(β) = −ln(p(t∨β)). Logistic Regression models can use regularization techniques to solve the problem of overfitting by adding the weight norm ||w|| in the error function, namely E(β)=12∣∣∣∣β∣∣∣∣2+C∑Nn=1{tnln(yn)+(1−tn)ln(1−yn)}, where C > 0 is the inverse parameter of the regulation.
+
+### Simultaneous and partial parameter testing is performed to examine the role of predictor variables in the model. Simultaneous parameter testing uses the G test.
+
+ - from sklearn.linear_model import LogisticRegression
+ - from sklearn.model_selection import train_test_split
+
+ - X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random_state=31)
 
 
-from sklearn.linear_model import LogisticRegression
-from sklearn.model_selection import train_test_split
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, random_state=31)
+ - from sklearn.linear_model import LogisticRegression
 
+ - log_reg = LogisticRegression(solver='liblinear', fit_intercept=True, random_state=1)
 
-
-from sklearn.linear_model import LogisticRegression
-
-log_reg = LogisticRegression(solver='liblinear', fit_intercept=True, random_state=1)
-
-log_reg.fit(X_train, y_train)
+ - log_reg.fit(X_train, y_train)
 
 
 
 # for test data
  - y_prob = log_reg.predict_proba(X_test)[:,1]
  - y_pred = log_reg.predict(X_test) #to change threshold should do it manually
+ 
+ 
+ 
+ # Accuracy
 
 
 
@@ -123,3 +138,7 @@ print('Accuracy for test: ',accuracy_score(y_test,y_pred))
 import seaborn as sns
 sns.distplot(df.NObeyesdad)
 plt.show()
+
+
+
+![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
