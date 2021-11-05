@@ -36,7 +36,7 @@
  - TUT (time using technology devices a day): 0 = 0–2 hours, 1 = 3–5 hours, 2 = more than 5 hours
  - CA (consumption of alcohol): 1= never, 2 = sometimes, 3 = frequently, 4 = always
  - Transportation: 1 = automobile, 2 = motorbike, 3 = bike, 4 = public transportation, 5= walking
- - Obesity (target variable): 2 = not obese, 4 = obese.
+ - Obesity (target variable):1 = Normal_Weight, 2 = Obesity_Type_I  , 3 = The person is Obesity_Type_II , 4 = The person is Obesity_Type_III , 5 = The person is Overweight_Level_I , 6 = The person is Overweight_Level_II   .
 
 # Data Preparation
 ## 1.Import libraries
@@ -76,7 +76,7 @@
 ## The .shape function accurately returned (2111,17), and the heatmap confirmed that there are no missing values.
 
 
-# Premodeling
+# Premodeling (CHANGING ALL TERMS TO NUMERIC BY USING THE LABEL ENCODER)
 ### 1.Preprocessing
 
  - from sklearn.preprocessing import LabelEncoder
@@ -100,6 +100,21 @@
  - from sklearn.model_selection import train_test_split
 
  - X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=1)
+
+#For train data
+y_prob_train = log_reg.predict_proba(X_train)[:,1]
+y_pred_train = log_reg.predict(X_train)
+
+
+# for test data
+y_prob = log_reg.predict_proba(X_test)[:,1]
+y_pred = log_reg.predict(X_test) #to change threshold should do it manually
+
+
+
+
+
+
 
  # Logistic Regression
 ### Logistic Regression
@@ -131,9 +146,7 @@
 
 
 
-# for test data
- - y_prob = log_reg.predict_proba(X_test)[:,1]
- - y_pred = log_reg.predict(X_test) #to change threshold should do it manually
+
  
  
  
@@ -148,6 +161,15 @@ print('Accuracy for test: ',accuracy_score(y_test,y_pred))
 ![image](https://user-images.githubusercontent.com/92929087/138447208-b770b912-6321-4a8f-8342-4124d229424e.png)
 
 
+ # ACCURACY FOR TRAIN DATA SET
+  - print('accuracy - Train: ',accuracy_score(y_train,y_pred_train))
+
+
+
+# ACCURCY FOR TEST DATASET
+ - print('accuracy - Test: ',accuracy_score(y_test,y_pred))
+
+
 
 
 # confusion matrix
@@ -158,10 +180,14 @@ print('Accuracy for test: ',accuracy_score(y_test,y_pred))
 
 
 
-# Recall Presicion 
- - print(classification_report(y_test,y_pred))
+ # RECALL ,PRECISION,F1-SCORE
+ 
+ ## FOR TRAIN DATASET
+  - print(classification_report(y_train,y_pred_train))
 
-![image](https://user-images.githubusercontent.com/92929087/138447404-a7294ea6-cf67-4766-a67c-d4d21236f063.png)
+
+## FOR TEST DATASET
+ - print(classification_report(y_test,y_pred))
 
 
 
@@ -228,6 +254,9 @@ elif(prediction[0] == 2):
   print('The person is Obesity_Type_I')
 elif(prediction[0] == 3):
   print('The person is Obesity_Type_II')
+  
+![1](https://user-images.githubusercontent.com/92929087/140477399-5a220cfb-d1ef-4b0c-914f-6333806cbe58.PNG)
+
 
 
 
