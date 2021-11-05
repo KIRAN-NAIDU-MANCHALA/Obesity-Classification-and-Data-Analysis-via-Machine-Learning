@@ -181,10 +181,17 @@ print('Accuracy for test: ',accuracy_score(y_test,y_pred))
 ## FOR TRAIN DATASET
  - print('Confussion matrix - Train: ','\n',confusion_matrix(y_train,y_pred_train))
 
+![d1](https://user-images.githubusercontent.com/92929087/140481483-f2d6bd54-64d1-4ef3-b15e-3bf7f641ba6d.PNG)
+
+
+
 
 
 ## FOR TEST DATA SET
  - print('Confussion matrix - Test: ','\n',confusion_matrix(y_test,y_pred))
+
+![d2](https://user-images.githubusercontent.com/92929087/140481489-f720a498-87d5-404c-8abf-3d97f98d6a02.PNG)
+
 
 
 
