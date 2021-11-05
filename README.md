@@ -221,7 +221,46 @@ print('Accuracy for test: ',accuracy_score(y_test,y_pred))
 
 ![LOVE](https://user-images.githubusercontent.com/92929087/140482808-499b7879-cdbe-4c5b-86cd-99789dfa2b2c.PNG)
 
- 
+
+# Correlation matrix
+ - df.corr()
+ ![image](https://user-images.githubusercontent.com/92929087/140484244-21b74058-a1c1-4f3a-9afa-d6e0d97c9687.png)
+
+ - sns.heatmap(df.corr(),linewidths=0.5)
+![image](https://user-images.githubusercontent.com/92929087/140484343-d98397f1-7c6d-4529-a03a-36ca77ea0c57.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
