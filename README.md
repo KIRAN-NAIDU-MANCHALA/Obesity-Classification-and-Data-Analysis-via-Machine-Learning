@@ -177,10 +177,14 @@ print('Accuracy for test: ',accuracy_score(y_test,y_pred))
 
 
 # confusion matrix
- - print('Confussion matrix : ','\n',confusion_matrix(y_test,y_pred))
 
-![image](https://user-images.githubusercontent.com/92929087/138447320-d1c244bf-f5a6-4992-a62b-60d18e9afae4.png)
+## FOR TRAIN DATASET
+ - print('Confussion matrix - Train: ','\n',confusion_matrix(y_train,y_pred_train))
 
+
+
+## FOR TEST DATA SET
+ - print('Confussion matrix - Test: ','\n',confusion_matrix(y_test,y_pred))
 
 
 
