@@ -188,7 +188,7 @@ print('Accuracy for test: ',accuracy_score(y_test,y_pred))
 
 ## FOR TEST DATASET
  - print(classification_report(y_test,y_pred))
- - ![t2](https://user-images.githubusercontent.com/92929087/140480124-50c0bfb3-f9a7-4f4b-95da-99c2766ed3df.PNG)
+ ![t2](https://user-images.githubusercontent.com/92929087/140480124-50c0bfb3-f9a7-4f4b-95da-99c2766ed3df.PNG)
 
 
 
