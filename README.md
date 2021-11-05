@@ -1,4 +1,19 @@
 # Obesity-Classification-and-Data-Analysis-via-Machine-Learning
+
+# Abstract
+
+#### The epidemic of overweight and obesity presents a major challenge to chronic 
+#### disease prevention and health across the life course around the world. 
+#### Fueled by economic growth, industrialization, mechanized transport, urbanization,
+#### an increasingly sedentary lifestyle, and a nutritional transition to processed 
+#### foods and high calorie diets over the last 30 years, many countries have witnessed
+#### the prevalence of obesity in its citizens double, and even quadruple. Rising prevalence
+#### of childhood obesity,in particular, forebodes a staggering burden of disease in individuals
+#### and healthcare systems in the decades to come. A complex, multifactorial disease, with genetic,
+#### behavioral, socioeconomic,and environmental origins, obesity raises risk of debilitating morbidity
+#### and mortality. Relying primarily on epidemiologic evidence published within the last decade, this 
+#### non-exhaustive review discusses the extentnof the obesity epidemic, its risk factors—known 
+#### and novel—, sequelae, and economic impact across the globe.
 ## Introduction
 #### I chose to further analyze the dataset I used for my EDA for the final project. The dataset recorded the obesity levels of people from Mexico, Peru, and Colombia alongside their eating habits and physical condition. As the project asked us to build a machine learning model, I was interested in building an accurate model around if a person is obese or not — a two-class problem — as well as finding the features that would be most relevant in training this model.
 
@@ -174,6 +189,58 @@ print('Accuracy for test: ',accuracy_score(y_test,y_pred))
  - plt.show()
 
 ![image](https://user-images.githubusercontent.com/92929087/138447889-72d2f4a9-78b0-41e2-9d9d-84cac9244500.png)
+
+
+## Testing model
+ - scaler = StandardScaler()
+ - scaler.fit(X)
+ - standardized_data = scaler.transform(X)
+ - classifier = svm.SVC(kernel='linear')
+ - training the support vector Machine Classifier
+ - classifier.fit(X_train, y_train)
+ - input_data = (0,21.000000,295,245,1,0,170,477,2,0,549,0,0,840,3,3)
+
+
+### changing the input_data to numpy array
+input_data_as_numpy_array = np.asarray(input_data)
+
+### reshape the array as we are predicting for one instance
+input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
+
+### standardize the input data
+std_data = scaler.transform(input_data_reshaped)
+print(std_data)
+
+prediction = classifier.predict(std_data)
+print(prediction)
+
+if (prediction[0] == 1):
+  print('The person is Normal_Weight')
+elif(prediction[0] == 5):
+  print('The person is Overweight_Level_I')
+elif(prediction[0] == 6):
+  print('The person is Overweight_Level_II')
+elif(prediction[0] == 4):
+  print('The person is Obesity_Type_III')
+elif(prediction[0] == 0):
+  print('The person is Insufficient_Weight')
+elif(prediction[0] == 2):
+  print('The person is Obesity_Type_I')
+elif(prediction[0] == 3):
+  print('The person is Obesity_Type_II')
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
