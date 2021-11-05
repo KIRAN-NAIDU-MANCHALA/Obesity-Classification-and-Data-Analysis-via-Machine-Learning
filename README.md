@@ -163,6 +163,8 @@ print('Accuracy for test: ',accuracy_score(y_test,y_pred))
 
  # ACCURACY FOR TRAIN DATA SET
   - print('accuracy - Train: ',accuracy_score(y_train,y_pred_train))
+  ![a1](https://user-images.githubusercontent.com/92929087/140480623-35d1b7e8-e927-44d1-9d39-7f22e313124c.PNG)
+
 
 
 
