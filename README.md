@@ -168,6 +168,8 @@ print('Accuracy for test: ',accuracy_score(y_test,y_pred))
 
 # ACCURCY FOR TEST DATASET
  - print('accuracy - Test: ',accuracy_score(y_test,y_pred))
+![a2](https://user-images.githubusercontent.com/92929087/140480108-2904a9f4-b349-43b0-afeb-415a69eb825c.PNG)
+
 
 
 
@@ -184,6 +186,8 @@ print('Accuracy for test: ',accuracy_score(y_test,y_pred))
  
  ## FOR TRAIN DATASET
   - print(classification_report(y_train,y_pred_train))
+  ![t1](https://user-images.githubusercontent.com/92929087/140480117-0a51352a-2a4e-401c-9968-63db3d168f6e.PNG)
+
 
 
 ## FOR TEST DATASET
