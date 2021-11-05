@@ -211,21 +211,14 @@ print('Accuracy for test: ',accuracy_score(y_test,y_pred))
 
 
 
-# mean squared error of the model
+# MEAN SQUARED ERROR
+## MSE
  - mse = mean_squared_error(y_test,y_pred)
  - mse
-
-![image](https://user-images.githubusercontent.com/92929087/138447594-5ed7a815-5d86-4458-8a3d-2d34ba53e4ec.png)
-
-
-
-
-# Finding error.
+## RMSE
  - rmse =np.sqrt(mean_squared_error(y_test,y_pred))
  - rmse
-
-![image](https://user-images.githubusercontent.com/92929087/138447671-67aa70bd-3cfe-4dfc-8906-b2157afacf78.png)
-
+ 
 
 
 
