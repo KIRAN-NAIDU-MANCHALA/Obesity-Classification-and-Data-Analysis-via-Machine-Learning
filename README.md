@@ -218,6 +218,9 @@ print('Accuracy for test: ',accuracy_score(y_test,y_pred))
 ## RMSE
  - rmse =np.sqrt(mean_squared_error(y_test,y_pred))
  - rmse
+
+![LOVE](https://user-images.githubusercontent.com/92929087/140482808-499b7879-cdbe-4c5b-86cd-99789dfa2b2c.PNG)
+
  
 
 
